@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "future-pathways-khaki.vercel.app" }],
+      "destination": "https://northline.keystonelabs.site/:path*",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
