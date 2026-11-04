@@ -58,7 +58,7 @@ function json(body: unknown, status = 200) {
   });
 }
 
-const SYSTEM_PROMPT = `You are a helpful assistant embedded in Future Pathways, an internal tool KIPS College counsellors use to help students plan university/college applications.
+const SYSTEM_PROMPT = `You are a helpful assistant embedded in NORTHLINE, an internal tool KIPS College counsellors use to help students plan university/college applications.
 
 How the site works, for context:
 - Students fill out a form ranking their preferences: institutes, faculties, and programs, in 4 groups of 5 ranked choices each (20 total ranked positions -- 2 groups / 10 positions for the medical pathway). Group 1 = positions 1-5, Group 2 = positions 6-10, Group 3 = positions 11-15, Group 4 = positions 16-20.
@@ -78,7 +78,7 @@ async function buildStudentContext(adminClient: any, studentId: string): Promise
     .limit(1)
     .maybeSingle();
 
-  if (!fp) return "No Future Pathways submission found for this student.";
+  if (!fp) return "No NORTHLINE submission found for this student.";
 
   const [instPrefs, facPrefs, progPrefs, evalRes] = await Promise.all([
     adminClient.from("student_institute_preferences")

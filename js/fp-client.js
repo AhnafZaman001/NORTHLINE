@@ -1,6 +1,6 @@
 /* =========================================================
    fp-client.js — shared Supabase client + auth helpers for
-   the Future Pathways form + admin pages.
+   the NORTHLINE form + admin pages.
 
    Login mechanism mirrors AXIOM (github.com/AhnafZaman001/AXIOM):
    email/password sign-in only, no self-serve signup. Accounts

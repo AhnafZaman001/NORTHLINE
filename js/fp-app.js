@@ -1,5 +1,5 @@
 /* =========================================================
-   fp-app.js — Future Pathways multi-step form.
+   fp-app.js — NORTHLINE multi-step form.
    Talks to Supabase via js/fp-client.js. No build step.
    ========================================================= */
 
@@ -533,7 +533,7 @@
     }
 
     if(state.status === "submitted"){
-      el.innerHTML = '<div class="fp-status-banner submitted">This Future Pathways form has been submitted. It is locked for editing — contact the admin office for changes.</div>';
+      el.innerHTML = '<div class="fp-status-banner submitted">This NORTHLINE form has been submitted. It is locked for editing — contact the admin office for changes.</div>';
     } else if(state.status === "draft"){
       el.innerHTML = '<div class="fp-status-banner draft">A draft is saved. Progress is saved automatically as you move through the steps.</div>';
     } else {

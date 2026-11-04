@@ -15,7 +15,7 @@ live in one repo:
    Used to be a "quick calculator" (matric + FSc Part 1 marks in,
    provisional merit score + suggested universities out) — that was
    the original prototype, but it duplicated the marks intake already
-   in Future Pathways and the field/university browsing already in
+   in NORTHLINE and the field/university browsing already in
    University Explorer, so it was removed. `index.html` is now a real
    dashboard: it reads the student's existing `students` row and
    latest `future_pathways` row from Supabase (no re-asking) and shows
@@ -25,7 +25,7 @@ live in one repo:
    `js/calculations.js`, `js/suggestions.js`, `js/supabase-client.js`,
    `js/ui.js`) were deleted. `js/data.js` (institute loader) is kept —
    the dashboard's "View all universities" modal still uses it.
-2. **Future Pathways** (`pathways.html` + `admin.html`) — the real
+2. **NORTHLINE** (`pathways.html` + `admin.html`) — the real
    product: digitizes an actual paper counselling form used by a
    school. Multi-step form, ranked institute/faculty preferences,
    draft autosave, one-submission-per-student, counsellor/admin
@@ -212,7 +212,7 @@ below it actually needs role before letting it block everything else.
 
 - Brand renamed `Rah` → `KIPS` across all 6 HTML files (verified zero
   leftover references, including JS/CSS).
-- `index.html` had the same 3 links (Future Pathways form / University
+- `index.html` had the same 3 links (NORTHLINE form / University
   Explorer / Merit guide) as both top-nav pills *and* body tool cards
   — removed the duplicate pills, kept the better-designed cards
   (icon + description + CTA).
@@ -983,7 +983,7 @@ themes.
    clicking Edit or Delete does NOT also trigger the row's own
    "open detail" handler, clicking elsewhere in the row still does.
 
-3. **Brand tagline**: "university counsellor" → "future pathway
+3. **Brand tagline**: "university counsellor" → "NORTHLINE
    university counsellor" on `index.html` and `login.html` only —
    the other pages have their own contextual tags (e.g. "merit
    calculator") that were correctly left alone. Verified no overflow
@@ -1047,7 +1047,7 @@ confirmed correct via real interaction, not just visual inspection.
 ## Nav pills: full pill → matching button radius, site-wide
 
 `.nav-link` (every topbar button on every page — "View all
-universities", "Future Pathways form", "Log out", etc.) used
+universities", "NORTHLINE form", "Log out", etc.) used
 `border-radius: 999px` — a full pill, a different shape from every
 other button on the site (`.btn-primary`/`.btn-secondary` both use
 `--radius-sm`). Direct feedback: this specific button read as

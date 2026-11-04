@@ -1,5 +1,5 @@
 /* =========================================================
-   fp-admin.js — counsellor/admin view of Future Pathways
+   fp-admin.js — counsellor/admin view of NORTHLINE
    submissions. RLS on the tables enforces access server-side;
    this client-side gate only avoids showing a confusing blank
    page to students who land here by mistake.
@@ -227,7 +227,7 @@
 
     var doc =
       "<!DOCTYPE html><html><head><meta charset=\"UTF-8\">" +
-      "<title>Future Pathways Student List</title>" +
+      "<title>NORTHLINE Student List</title>" +
       "<style>" +
         "@page{ size: A4 landscape; margin: 16mm 14mm; }" +
         "*{ box-sizing:border-box; }" +
@@ -245,7 +245,7 @@
         ".report-footer{ margin-top:14px; font-size:10px; color:#888; text-align:right; }" +
       "</style></head><body>" +
       "<div class=\"report-header\">" +
-        "<div class=\"report-title\">Future Pathways | Student List</div>" +
+        "<div class=\"report-title\">NORTHLINE | Student List</div>" +
         "<div class=\"report-meta\">KIPS Counsellor Office<br>Generated " + esc(generatedAt) + "</div>" +
       "</div>" +
       "<div class=\"report-filters\">" + esc(filterSummary) + " &nbsp;|&nbsp; " + filtered.length + " student" + (filtered.length === 1 ? "" : "s") + "</div>" +
@@ -253,7 +253,7 @@
         "<th>Student</th><th>Father</th><th>Contact</th><th>Roll #</th><th>Matric</th><th>1st Yr</th>" +
         "<th>Pathway</th><th>" + esc(priorityColLabel) + "</th><th>Status</th><th>Submitted</th>" +
       "</tr></thead><tbody>" + rowsHtml + "</tbody></table>" +
-      "<div class=\"report-footer\">Future Pathways &middot; KIPS College</div>" +
+      "<div class=\"report-footer\">NORTHLINE &middot; KIPS College</div>" +
       "</body></html>";
 
     // A hidden iframe instead of window.open() -- prints straight to
@@ -1214,7 +1214,7 @@
 
     var doc =
       "<!DOCTYPE html><html><head><meta charset=\"UTF-8\">" +
-      "<title>" + esc(name) + " | Future Pathways Form</title>" +
+      "<title>" + esc(name) + " | NORTHLINE Form</title>" +
       "<style>" +
         "@page{ size: A4; margin: 16mm; }" +
         "*{ box-sizing:border-box; }" +
@@ -1238,7 +1238,7 @@
       "</style></head><body>" +
       "<div class=\"report-header\">" +
         "<div class=\"report-title\">" + esc(name) + "</div>" +
-        "<div class=\"report-meta\">Future Pathways Form &middot; KIPS College<br>Generated " + esc(generatedAt) + "</div>" +
+        "<div class=\"report-meta\">NORTHLINE Form &middot; KIPS College<br>Generated " + esc(generatedAt) + "</div>" +
       "</div>" +
 
       "<section><h2>Student Information</h2><table>" +
@@ -1273,7 +1273,7 @@
         "</section>"
         : "") +
 
-      "<div class=\"report-footer\">Future Pathways &middot; KIPS College</div>" +
+      "<div class=\"report-footer\">NORTHLINE &middot; KIPS College</div>" +
       "</body></html>";
 
     var iframe = document.createElement("iframe");

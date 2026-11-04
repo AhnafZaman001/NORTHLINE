@@ -3,11 +3,11 @@
 
    index.html used to be a standalone "quick calculator" that
    re-asked for name + marks + field/area, then suggested
-   universities — all of which duplicates the Future Pathways
+   universities — all of which duplicates the NORTHLINE
    form (pathways.html) and the University Explorer
    (rankings.html). That form is gone; this page is now a
    dashboard: it reads the student's *existing* data (profile +
-   Future Pathways status) straight from Supabase and tells them
+   NORTHLINE status) straight from Supabase and tells them
    where they actually stand, with quick links into the three
    real tools. Nothing here re-collects marks or preferences.
    ========================================================= */
@@ -222,7 +222,7 @@ window.Dashboard = window.Dashboard || {};
       var stampLabel = stamp ? stamp.toLocaleDateString(undefined, { year:"numeric", month:"long", day:"numeric" }) : "an earlier date";
       return '<div class="dash-status-card is-submitted">' +
         '<span class="dash-status-tag">Submitted</span>' +
-        '<h2>Future Pathways application submitted.</h2>' +
+        '<h2>NORTHLINE application submitted.</h2>' +
         '<p>Submitted on ' + escapeHtml(stampLabel) + '. It\u2019s locked for editing &mdash; contact the admin office if something needs to change.</p>' +
         '<a class="btn-ghost dash-status-cta" href="pathways.html">Review submission</a>' +
         '</div>';
@@ -231,7 +231,7 @@ window.Dashboard = window.Dashboard || {};
     if(status === "draft"){
       return '<div class="dash-status-card is-draft">' +
         '<span class="dash-status-tag">Draft saved</span>' +
-        '<h2>Continue this Future Pathways application.</h2>' +
+        '<h2>Continue this NORTHLINE application.</h2>' +
         '<p>' + (hasMarks ? "Marks are already on file &mdash; " : "") + 'A draft is in progress. Continue where it left off; nothing is re-entered.</p>' +
         '<a class="btn-primary dash-status-cta" href="pathways.html">Continue application</a>' +
         '</div>';
@@ -239,7 +239,7 @@ window.Dashboard = window.Dashboard || {};
 
     return '<div class="dash-status-card is-empty">' +
       '<span class="dash-status-tag">Not started</span>' +
-      '<h2>This Future Pathways application hasn\u2019t been started yet.</h2>' +
+      '<h2>This NORTHLINE application hasn\u2019t been started yet.</h2>' +
       '<p>The official counselling submission &mdash; marks, ranked institute and faculty preferences, reviewed by staff.</p>' +
       '<a class="btn-primary dash-status-cta" href="pathways.html">Start the form</a>' +
       '</div>';

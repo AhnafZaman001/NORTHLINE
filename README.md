@@ -1,4 +1,4 @@
-# Future Pathways
+# NORTHLINE
 
 A student-facing tool that takes matric marks, FSc Part 1 marks, field of
 study, and preferred city, and suggests university/program preferences —
@@ -85,7 +85,7 @@ other file needs touching.
 
 - No historical merit data (placeholders only — see above)
 
-## Future Pathways form (`pathways.html`, `auth.html`, `admin.html`)
+## NORTHLINE form (`pathways.html`, `auth.html`, `admin.html`)
 
 A separate, full multi-step preference-submission flow sits alongside the
 quick merit calculator above. It has its own auth, own Supabase tables,
@@ -212,7 +212,7 @@ export), split 34 Pre-Medical / 33 Pre-Engineering / 33 ICS, each with a
 minimal synthetic `auth.users` row (required — `future_pathways.student_id`
 chains through `students` → `app_users` → `auth.users`, so there's no way
 to seed a submission without a real auth row backing it) and a fully
-submitted Future Pathways form with randomized-but-schema-valid ranked
+submitted NORTHLINE form with randomized-but-schema-valid ranked
 institute/faculty/program preferences.
 
 **What's real vs synthetic, explicitly:** student name, section, roll

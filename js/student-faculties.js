@@ -244,14 +244,14 @@
         ".report-footer{ margin-top:14px; font-size:10px; color:#888; text-align:right; }" +
       "</style></head><body>" +
       "<div class=\"report-header\">" +
-        "<div class=\"report-title\">Future Pathways | Student Faculties</div>" +
+        "<div class=\"report-title\">NORTHLINE | Student Faculties</div>" +
         "<div class=\"report-meta\">KIPS Counsellor Office<br>Generated " + esc(generatedAt) + "</div>" +
       "</div>" +
       "<div class=\"report-filters\">" + rows.length + " student" + (rows.length === 1 ? "" : "s") + "</div>" +
       "<table><thead><tr>" +
         "<th>Student</th><th>Pathway</th><th>" + esc(priorityColLabel) + "</th><th>Status</th>" +
       "</tr></thead><tbody>" + rowsHtml + "</tbody></table>" +
-      "<div class=\"report-footer\">Future Pathways | KIPS College</div>" +
+      "<div class=\"report-footer\">NORTHLINE | KIPS College</div>" +
       "</body></html>";
 
     var iframe = document.createElement("iframe");
