@@ -58,6 +58,14 @@ RLS.
 service role key or database password, which should never go in this
 repo or in browser code.
 
+## Sign-in alerts
+
+In the NORTHLINE Supabase project, deploy `supabase/functions/send-login-alert/index.ts` as `send-login-alert`. Disable the gateway's legacy **Verify JWT** setting for this function. The handler validates the user's Supabase token before sending.
+
+Set the Edge Function secrets `RESEND_API_KEY` (a sending key for `keystonelabs.site`) and `ALERT_RECIPIENTS_BY_INSTITUTION`. The second secret is a JSON object keyed by `public.institutions.id`, for example `{"institution-uuid":["admin@example.com"]}`. Use only the intended recipients for each institution. Unconfigured institutions receive no alerts.
+
+Sign out and sign back in with a test account assigned to a configured institution. Check Resend's email log and the recipient's inbox for a message from `northline-alerts@keystonelabs.site`.
+
 ## How it works
 
 1. Student enters name, matric obtained/total, FSc Part 1 obtained/total,

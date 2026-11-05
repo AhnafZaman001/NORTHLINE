@@ -29,6 +29,17 @@ window.FP = window.FP || {};
     return client.auth.signInWithPassword({ email: email, password: password })
       .then(function(r){
         if(r.error) throw r.error;
+        var session = r.data.session;
+        if(session && session.access_token){
+          fetch(SUPABASE_URL + "/functions/v1/send-login-alert", {
+            method: "POST",
+            headers: {
+              apikey: SUPABASE_ANON_KEY,
+              Authorization: "Bearer " + session.access_token
+            },
+            keepalive: true
+          }).catch(function(){});
+        }
         return r.data;
       });
   };
